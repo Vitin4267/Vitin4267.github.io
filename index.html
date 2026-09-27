@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Ferrareto — Portfólio</title>
+  <meta name="description" content="Portfólio de Victor Ferrareto Dias — desenvolvedor de automação com n8n, integrações de API e agentes de IA em produção.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#hero" class="nav-logo">VF<span class="dot">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container">
+      <p class="status-pill reveal"><span class="status-dot"></span>Aberto a vagas júnior de automação / low-code</p>
+      <p class="eyebrow reveal">Olá, eu sou</p>
+      <h1 class="reveal">Victor Ferrareto Dias</h1>
+      <p class="hero-tagline reveal">Desenvolvedor de automação com n8n — integrações de API, agentes de IA e workflows seguros rodando em produção.</p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">Ver projetos</a>
+        <a href="mailto:ferraretovitor@gmail.com" class="btn btn-ghost">Falar comigo</a>
+      </div>
+      <div class="hero-links reveal">
+        <a href="https://github.com/Vitin4267" target="_blank" rel="noopener noreferrer" aria-label="Perfil no GitHub">
+          <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+          </svg>
+        </a>
+        <a href="mailto:ferraretovitor@gmail.com" aria-label="Enviar e-mail">
+          <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M1 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4Zm2-.5a.5.5 0 0 0-.5.5v.217l5.5 3.19 5.5-3.19V4a.5.5 0 0 0-.5-.5H3Zm10.5 2.02-4.98 2.888a1 1 0 0 1-1.04 0L2.5 5.52V12a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V5.52Z"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="about container reveal">
+      <span class="section-label">01 · Sobre</span>
+      <h2>Sobre mim</h2>
+      <p>
+        Moro em São Paulo e trabalho com automação usando n8n: workflows, integrações de API, webhooks e agentes de IA
+        conectados ao WhatsApp. Cursei 2 anos de Ciência da Computação e hoje aprendo construindo coisas que rodam de
+        verdade — todos os projetos abaixo estão em produção ou foram testados com dados reais.
+      </p>
+      <p>
+        Uso IA no dia a dia, e digo isso abertamente: a arquitetura, as decisões de produto e as de segurança são minhas;
+        a IA me ajuda com a sintaxe que ainda não decorei e a revisar decisões. Uma coisa aparece em todo projeto meu:
+        não aceito atalho de segurança. Se não está protegido, não está pronto.
+      </p>
+      <p>
+        O GrafPro, o primeiro projeto abaixo, é diferente dos outros: é um sistema completo que eu dirigi do zero —
+        arquitetura, prioridades e segurança — com a implementação feita junto com IA, revisando e validando cada etapa
+        antes de ir para o ar.
+      </p>
+    </section>
+
+    <section id="projects" class="projects container">
+      <span class="section-label reveal">02 · Projetos</span>
+      <h2 class="reveal">Trabalhos selecionados</h2>
+
+      <!-- Projeto 1: GrafPro -->
+      <article class="project-card reveal">
+        <div class="project-photo">
+          <img src="assets/grafpro-screenshot.png" alt="Página inicial do GrafPro: título 'Orçamentos rápidos e sua gráfica sempre organizada' e um exemplo de orçamento de banner em lona de 100×200 cm para uma padaria, totalizando R$ 180,00.">
+        </div>
+
+        <div class="project-links">
+          <a href="https://grafica-saas-peach.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+            Ver no ar ↗
+          </a>
+          <span class="btn btn-small btn-small-outline btn-disabled">Repositório privado — mostro o código numa conversa</span>
+        </div>
+
+        <h3>GrafPro</h3>
+        <p class="project-note" style="margin-top: 0; margin-bottom: 20px; border-top: none; padding-top: 0;">
+          Dirigido e com a segurança arquitetada por mim — implementação feita em par com IA, não digitada linha a linha.
+        </p>
+        <p class="project-desc">
+          Sistema de gestão (SaaS) para gráficas brasileiras — orçamento, produção, estoque, financeiro e assinatura num
+          produto só, em uso por uma gráfica real. A gráfica cadastra o catálogo, monta orçamentos com o preço calculado
+          automaticamente, e o orçamento aprovado vira pedido de produção, com baixa de estoque, comissão de vendedor,
+          nota fiscal e cobrança recorrente via Stripe. Multi-tenant de verdade: cada gráfica só enxerga os próprios dados.
+        </p>
+
+        <ul class="tech-pills">
+          <li>Next.js 16</li>
+          <li>TypeScript</li>
+          <li>Prisma 7</li>
+          <li>PostgreSQL (Neon)</li>
+          <li>Stripe</li>
+          <li>Tailwind CSS 4</li>
+          <li>n8n</li>
+          <li>Cloudflare Turnstile</li>
+          <li>Vercel</li>
+        </ul>
+
+        <ul class="highlights">
+          <li><strong>Motor de preço próprio</strong> — três modelos de cálculo (unidade, m² e offset com folha, chapa e acerto), cada um validado e testado separadamente.</li>
+          <li><strong>Isolamento entre gráficas auditado</strong> — toda consulta autenticada é filtrada pela gráfica logada (<code>graficaId</code>); uma auditoria de código confirmou que nenhuma escrita escapa desse padrão.</li>
+          <li><strong>Auditoria de segurança completa</strong> (jul/2026) cobrindo isolamento, login, permissões, cobrança e injeção — achou e corrigiu problemas reais, cada um verificado com teste de concorrência no banco e varredura passiva do OWASP ZAP, não só leitura de código.</li>
+          <li><strong>Auditoria de confiabilidade</strong> (ago/2026) focada em falhas de produção — pegou casos de corrupção silenciosa, como a validação de estoque que olhava cada item do pedido separado em vez de somar a matéria-prima compartilhada.</li>
+          <li><strong>Cobrança resiliente</strong> — assinatura sincronizada por webhooks idempotentes do Stripe, protegida contra assinatura duplicada simultânea.</li>
+          <li><strong>Mais de 2.300 testes automatizados</strong> — regra de negócio e testes de integração contra um banco real nos pontos sensíveis a concorrência (limite de requisições, checkout, isolamento, estoque).</li>
+        </ul>
+
+        <details class="architecture-toggle">
+          <summary>Ver diagrama de arquitetura</summary>
+          <div class="architecture-frame">
+            <img src="assets/grafpro-architecture.svg" alt="Arquitetura em camadas do GrafPro: o navegador acessa o app Next.js na Vercel, que se integra com Turnstile, n8n, Stripe e Focus NFe e orquestra quatro módulos de domínio gravando num PostgreSQL isolado por gráfica.">
+          </div>
+        </details>
+      </article>
+
+      <!-- Projeto 2: n8n Self-Healing -->
+      <article class="project-card reveal">
+        <div class="project-photo contain">
+          <img src="assets/n8n-self-healing-screenshot-cropped.png" alt="Canvas do n8n do workflow W1 de detecção e triagem: checagem de duplicidade, limite de repetição, classificação de gravidade por IA e chamada do Claude Code, com notas explicando as decisões.">
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/Vitin4267/n8n-self-healing" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <h3>n8n Self-Healing</h3>
+        <p class="project-desc">
+          Quando um workflow falha em produção, este sistema cuida do ciclo todo: detecta → a IA faz a triagem →
+          diagnostica a causa sozinho → pede aprovação pelo WhatsApp → aplica a correção → abre um pull request.
+          Feito com n8n, Claude Code (rodando no mesmo servidor), Postgres e WhatsApp.
+        </p>
+
+        <ul class="tech-pills">
+          <li>n8n</li>
+          <li>Claude Code CLI</li>
+          <li>Postgres</li>
+          <li>OpenRouter (GPT-4o-mini)</li>
+          <li>Evolution API</li>
+          <li>GitHub</li>
+        </ul>
+
+        <ul class="highlights">
+          <li><strong>Duas aprovações separadas</strong> — o "aprovar" no WhatsApp só autoriza a IA a <em>tentar</em> uma correção numa branch; a mudança só vale depois que eu reviso e faço o merge do PR no GitHub.</li>
+          <li><strong>GET nunca muda nada, só POST</strong> — o link de revisão só mostra a página; a decisão só acontece no clique do botão, então um antivírus que "abre" o link sozinho não consegue aprovar nada.</li>
+          <li><strong>Leitura × escrita garantidas por permissão, não por prompt</strong> — no diagnóstico a IA roda com <code>--allowedTools "Read,Grep,Glob"</code> e fisicamente não consegue alterar nada, diga o prompt o que disser.</li>
+          <li><strong>Deduplicação e limite de repetição resolvem problemas diferentes</strong> — um pergunta "esse erro já está sendo tratado?", o outro "esse erro disparou vezes demais nos últimos minutos?".</li>
+          <li><strong>Na dúvida, escala; na execução, trava</strong> — se o classificador falha, o incidente sobe por padrão; se a correção aprovada não se aplica, o sistema aborta e avisa em vez de improvisar.</li>
+          <li><strong>Token de aprovação consumido de forma atômica</strong> — checado e marcado como usado num único <code>UPDATE ... WHERE ... RETURNING</code>, então um clique duplo não dispara a correção duas vezes.</li>
+        </ul>
+      </article>
+
+      <!-- Projeto 3: PetShop WhatsApp -->
+      <article class="project-card reveal">
+        <div class="project-photo">
+          <img src="assets/petshop-whatsapp-bot-screenshot.png" alt="Canvas do n8n do assistente de WhatsApp do pet shop, com limitador de requisições, agrupamento de mensagens, classificador de intenção e agente de IA.">
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/Vitin4267/petshop-whatsapp-bot" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <h3>Assistente de WhatsApp com IA para pet shop</h3>
+        <p class="project-desc">
+          Bot de atendimento no WhatsApp feito num único workflow do n8n. Responde saudações, dúvidas de preço,
+          agendamento, reclamações e até mensagens com imagem e áudio — pensado para gastar pouco com IA, aguentar
+          pico de mensagens e nunca deixar o cliente sem resposta.
+        </p>
+
+        <ul class="tech-pills">
+          <li>n8n</li>
+          <li>Evolution API</li>
+          <li>OpenRouter (Gemini)</li>
+          <li>Postgres</li>
+          <li>Google Sheets</li>
+          <li>Docker</li>
+        </ul>
+
+        <ul class="highlights">
+          <li><strong>Custo de IA baixo por design</strong> — um classificador barato e rápido (temperatura 0) faz a triagem de toda mensagem; só os casos complexos chegam ao agente completo, com memória e ferramentas.</li>
+          <li><strong>Uma ideia, uma resposta</strong> — quem manda várias mensagens seguidas recebe uma resposta só: um buffer no Postgres junta os pedaços e responde quando o cliente para de digitar.</li>
+          <li><strong>Corrigi um bug real de "eco"</strong> — o classificador via as próprias classificações antigas como memória e começou a repeti-las; troquei por uma ferramenta que lê o histórico real da conversa, filtrado por um ID fixo na configuração (a IA não escolhe de quem é a conversa).</li>
+          <li><strong>Falha avisa, não some</strong> — toda chamada de IA/HTTP tem nova tentativa automática, e a análise de mídia checa falhas disfarçadas (resposta 200 com erro dentro) em vez de confiar só no status.</li>
+          <li><strong>Segurança</strong> — limite de mensagens por contato, defesa explícita contra prompt injection (texto do cliente é tratado como dado, nunca como instrução) e filtro de contato fixo em toda consulta ao banco.</li>
+        </ul>
+
+        <p class="project-note">
+          Limitação conhecida, documentada em vez de escondida: o buffer de mensagens não é 100% seguro sob carga
+          simultânea pesada do mesmo contato — ok na escala atual; em produção grande, pediria uma trava de linha
+          (<code>SELECT ... FOR UPDATE</code>).
+        </p>
+      </article>
+
+      <!-- Projeto 4: n8n Error Handling -->
+      <article class="project-card reveal">
+        <div class="project-links">
+          <a href="https://github.com/Vitin4267/n8n-error-handling" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <h3>Central de erros do n8n</h3>
+        <p class="project-desc">
+          Workflow que recebe as falhas de todos os outros e transforma em alerta útil, em vez de uma enxurrada de
+          e-mails iguais. Resolve um problema concreto: com várias automações rodando, um workflow com defeito pode
+          disparar dezenas de alertas em minutos e esconder o único que importa.
+        </p>
+
+        <ul class="tech-pills">
+          <li>n8n</li>
+          <li>OpenRouter</li>
+          <li>Google Sheets</li>
+          <li>Gmail</li>
+        </ul>
+
+        <ul class="highlights">
+          <li><strong>Disjuntor por tipo de erro</strong> — separado por <em>workflow + nó + mensagem normalizada</em>, então um workflow barulhento nunca silencia o alerta de outra falha.</li>
+          <li><strong>Gravidade classificada por IA</strong> — um LLM com saída estruturada dá nota CRÍTICO / ERRO / AVISO olhando seis critérios de impacto (financeiro, visibilidade externa, reversibilidade, efeito cascata, persistência, janela de tempo) e explica o porquê.</li>
+          <li><strong>Economia em rajada</strong> — quando os erros disparam em sequência, o disjuntor pula a IA e usa um classificador por regras, de graça: 50 erros não viram 50 chamadas pagas.</li>
+          <li><strong>Três caminhos</strong> — alerta detalhado, um único aviso de "tempestade" e depois silêncio, ou só registro, até o período de espera acabar.</li>
+          <li><strong>Nada some</strong> — o próximo alerta depois de uma tempestade informa quantos erros foram silenciados enquanto o disjuntor estava aberto, e um resumo diário por e-mail consolida as últimas 24h.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="skills" class="skills container reveal">
+      <span class="section-label">03 · Habilidades</span>
+      <h2>Com o que eu trabalho</h2>
+      <div class="skills-grid">
+        <div>
+          <h3>Automação</h3>
+          <ul class="tech-pills">
+            <li>n8n (self-hosted)</li>
+            <li>Webhooks</li>
+            <li>APIs REST</li>
+            <li>Code node (JavaScript)</li>
+            <li>Evolution API (WhatsApp)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>IA aplicada</h3>
+          <ul class="tech-pills">
+            <li>Agentes com memória e ferramentas</li>
+            <li>Saída estruturada</li>
+            <li>Classificação de intenção</li>
+            <li>OpenRouter · Gemini · GPT</li>
+            <li>Claude Code</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Dados e infraestrutura</h3>
+          <ul class="tech-pills">
+            <li>PostgreSQL</li>
+            <li>Google Sheets</li>
+            <li>Docker</li>
+            <li>Linux · Oracle Cloud</li>
+            <li>Git · GitHub</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Idiomas</h3>
+          <ul class="tech-pills">
+            <li>Português (nativo)</li>
+            <li>Inglês (leitura técnica e escrita)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-title">Vamos conversar</p>
+        <p class="footer-sub">Aberto a vagas de automação e a problemas interessantes.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:ferraretovitor@gmail.com">ferraretovitor@gmail.com</a>
+        <a href="https://github.com/Vitin4267" target="_blank" rel="noopener noreferrer">github.com/Vitin4267</a>
+      </div>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Victor Ferrareto Dias</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

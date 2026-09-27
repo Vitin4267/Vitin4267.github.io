@@ -1,0 +1,104 @@
+<svg viewBox="0 0 1000 590" xmlns="http://www.w3.org/2000/svg" role="img" font-family="Arial, sans-serif">
+  <title>Arquitetura do GrafPro</title>
+  <desc>Diagrama em camadas: navegador do cliente conecta ao app Next.js na Vercel, que se integra lateralmente com Turnstile, n8n, Stripe e Focus NFe, e por baixo orquestra quatro módulos de domínio (Catálogo e Preço, Orçamento para Pedido, Estoque e Produção, Financeiro e Comissão) que gravam num PostgreSQL isolado por gráfica.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <style>
+    .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; }
+    .box-core { fill: #ffffff; stroke: #2563eb; stroke-width: 1.2; }
+    .box-db { fill: #f1f5f9; stroke: #2563eb; stroke-width: 1.4; }
+    .title { fill: #0f172a; font-size: 14px; font-weight: 600; }
+    .sub { fill: #475569; font-size: 11px; }
+    .sub-muted { fill: #94a3b8; font-size: 11px; }
+    .lbl { fill: #94a3b8; font-size: 11px; letter-spacing: 0.04em; }
+    .edge { stroke: #94a3b8; stroke-width: 1.2; fill: none; marker-end: url(#arrow); }
+  </style>
+
+  <rect width="1000" height="590" fill="#ffffff"/>
+
+  <!-- Cliente -->
+  <rect class="box" x="400" y="16" width="200" height="50" rx="8"/>
+  <text class="title" x="500" y="38" text-anchor="middle">Navegador</text>
+  <text class="sub" x="500" y="55" text-anchor="middle">gráfica logada (multi-tenant)</text>
+
+  <path class="edge" d="M500,66 L500,104"/>
+
+  <!-- Next.js -->
+  <rect class="box-core" x="330" y="104" width="340" height="72" rx="8"/>
+  <text class="title" x="500" y="130" text-anchor="middle">Next.js (Vercel)</text>
+  <text class="sub" x="500" y="148" text-anchor="middle">App Router · Server Actions</text>
+  <text class="sub-muted" x="500" y="163" text-anchor="middle">sessão via cookie + hash</text>
+
+  <!-- Integrações esquerda -->
+  <rect class="box" x="20" y="109" width="200" height="46" rx="8"/>
+  <text x="120" y="128" text-anchor="middle" style="fill:#0f172a;font-size:12px;font-weight:600">Cloudflare Turnstile</text>
+  <text class="sub-muted" x="120" y="143" text-anchor="middle">anti-bot no login</text>
+  <path class="edge" d="M220,132 L330,132"/>
+
+  <rect class="box" x="20" y="178" width="200" height="46" rx="8"/>
+  <text x="120" y="197" text-anchor="middle" style="fill:#0f172a;font-size:12px;font-weight:600">n8n (self-hosted)</text>
+  <text class="sub-muted" x="120" y="212" text-anchor="middle">e-mail transacional &amp; IA</text>
+  <path class="edge" d="M220,201 L330,158"/>
+
+  <!-- Integrações direita -->
+  <rect class="box" x="780" y="109" width="200" height="46" rx="8"/>
+  <text x="880" y="128" text-anchor="middle" style="fill:#0f172a;font-size:12px;font-weight:600">Stripe</text>
+  <text class="sub-muted" x="880" y="143" text-anchor="middle">assinatura da gráfica</text>
+  <path class="edge" d="M780,132 L670,132"/>
+
+  <rect class="box" x="780" y="178" width="200" height="46" rx="8"/>
+  <text x="880" y="197" text-anchor="middle" style="fill:#0f172a;font-size:12px;font-weight:600">Focus NFe</text>
+  <text class="sub-muted" x="880" y="212" text-anchor="middle">emissão de nota fiscal</text>
+  <path class="edge" d="M780,201 L670,158"/>
+
+  <text class="lbl" x="500" y="248" text-anchor="middle">MÓDULOS DE DOMÍNIO</text>
+
+  <!-- bus lines to domain row -->
+  <path class="edge" d="M500,176 L500,258"/>
+  <path d="M155,258 L845,258" stroke="#cbd5e1" stroke-width="1"/>
+  <path d="M155,258 L155,264" stroke="#cbd5e1" stroke-width="1"/>
+  <path d="M385,258 L385,264" stroke="#cbd5e1" stroke-width="1"/>
+  <path d="M615,258 L615,264" stroke="#cbd5e1" stroke-width="1"/>
+  <path d="M845,258 L845,264" stroke="#cbd5e1" stroke-width="1"/>
+
+  <!-- Domain modules -->
+  <rect class="box" x="50" y="264" width="210" height="66" rx="8"/>
+  <text x="155" y="290" text-anchor="middle" style="fill:#0f172a;font-size:12px;font-weight:600">Catálogo &amp; Preço</text>
+  <text class="sub-muted" x="155" y="306" text-anchor="middle">motor de precificação</text>
+  <text class="sub-muted" x="155" y="320" text-anchor="middle">(unidade, m², offset)</text>
+
+  <rect class="box" x="280" y="264" width="210" height="66" rx="8"/>
+  <text x="385" y="290" text-anchor="middle" style="fill:#0f172a;font-size:12px;font-weight:600">Orçamento → Pedido</text>
+  <text class="sub-muted" x="385" y="306" text-anchor="middle">aprovado vira produção</text>
+
+  <rect class="box" x="510" y="264" width="210" height="66" rx="8"/>
+  <text x="615" y="290" text-anchor="middle" style="fill:#0f172a;font-size:12px;font-weight:600">Estoque &amp; Produção</text>
+  <text class="sub-muted" x="615" y="306" text-anchor="middle">baixa automática</text>
+  <text class="sub-muted" x="615" y="320" text-anchor="middle">múltiplas prensas/filiais</text>
+
+  <rect class="box" x="740" y="264" width="210" height="66" rx="8"/>
+  <text x="845" y="290" text-anchor="middle" style="fill:#0f172a;font-size:12px;font-weight:600">Financeiro &amp; Comissão</text>
+  <text class="sub-muted" x="845" y="306" text-anchor="middle">nota fiscal, despesas</text>
+  <text class="sub-muted" x="845" y="320" text-anchor="middle">comissão de vendedor</text>
+
+  <!-- fan-in to db -->
+  <path d="M155,330 L155,366" stroke="#cbd5e1" stroke-width="1"/>
+  <path d="M385,330 L385,366" stroke="#cbd5e1" stroke-width="1"/>
+  <path d="M615,330 L615,366" stroke="#cbd5e1" stroke-width="1"/>
+  <path d="M845,330 L845,366" stroke="#cbd5e1" stroke-width="1"/>
+  <path d="M155,366 L845,366" stroke="#cbd5e1" stroke-width="1"/>
+  <path class="edge" d="M500,366 L500,404"/>
+
+  <!-- Postgres -->
+  <rect class="box-db" x="350" y="404" width="300" height="66" rx="8"/>
+  <text class="title" x="500" y="430" text-anchor="middle">PostgreSQL (Neon)</text>
+  <text class="sub" x="500" y="448" text-anchor="middle">via Prisma · 108 tabelas</text>
+  <text class="sub-muted" x="500" y="462" text-anchor="middle">toda query escopada por graficaId</text>
+
+  <text class="sub-muted" x="500" y="510" text-anchor="middle">Cron: backup diário + lifecycle de trial/assinatura · Sentry monitora erros em produção</text>
+</svg>
